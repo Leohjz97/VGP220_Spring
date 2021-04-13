@@ -1,8 +1,8 @@
 #include <iostream>
 #include <assert.h>
 
-//Name:
-//StudentId:
+//Name: Jiazheng Hu
+//StudentId: 2042895
 
 int RecursiveMultiplication(int a, int b);
 int NonRecursiveFibonacci(int n);
@@ -32,6 +32,18 @@ int RecursiveMultiplication(int a, int b)
 	//without using the operator *
 	//You can use addition(+), subtraction(-) and bitShifting(<< or >>), but you
 	//should minimize the number of those operations.
+	if (a < b)
+	{
+		return RecursiveMultiplication(b, a);
+	}
+	else if (b != 0)
+	{
+		return (a + RecursiveMultiplication(a, b - 1));
+	}
+	else
+	{
+		return 0;
+	}
 
 	return 0;
 }
@@ -40,6 +52,22 @@ int NonRecursiveFibonacci(int n)
 {
 	//TODO: Convert the recursive fibonacci that we did in class
 	//to a non recursive method, using a bottom-up approach.
+	int a = 0;
+	int b = 1;
+	if (n < 1)
+	{
+		return 0;
+	}
+	else
+	{
+		for (int i = 0; i < n; i++)
+		{
+			int next = a + b;
+			a = b;
+			b = next;
+		}
+		return a;
+	}
 	return 0;
 }
 
@@ -50,6 +78,23 @@ int PrintFibonacciLessThan15(int n)
 	//PrintFibonacciLessThan15(7) -> "0 1 1 2 3 5 8 13". You just need to print what is between "".
 	//Don't forget that is less than 15, so use assert if the method is being used outside the
 	//boundaries of the function.
+	int a = 0;
+	int b = 1;
+	if (n < 1)
+	{
+		return 0;
+	}
+	else
+	{
+		std::cout << "Expected result: " << a << " ";
+		for (int i = 0; i < n; i++)
+		{
+			std::cout << b << " ";
+			int next = a + b;
+			a = b;
+			b = next;
+		}
+	}
 	return 0;
 }
 
@@ -61,6 +106,19 @@ int printRecursiveFactorialLessThan50(int n)
 	//As an example:
 	//printRecursiveFactorialLessThan50(10) -> "10 * 9 * 8 * 7 * 6 * 5 * 4 * 3 * 2 * 1"
 	//The function just prints what is between "".
+	if (n < 1)
+	{
+		return 0;
+	}
+	else if (n == 1)
+	{
+		std::cout << n;
+	}
+	else
+	{
+		std::cout << n <<" * ";
+		return n * printRecursiveFactorialLessThan50(n - 1);
+	}
 	return 0;
 }
 
@@ -76,3 +134,4 @@ int DynamicProgrammingFunc(int n)
 
 	return DynamicProgrammingFunc(n - 3) - (DynamicProgrammingFunc(n - 1) * DynamicProgrammingFunc(n - 2));
 }
+
