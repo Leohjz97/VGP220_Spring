@@ -2,6 +2,7 @@
 
 //Name: Jiazheng Hu
 //ID: 2042895
+//try to do Q6
 
 //TODO:  
 //Question 1:
