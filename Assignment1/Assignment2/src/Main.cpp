@@ -82,7 +82,7 @@ int removeDuplicates(char arr[], int n)
     }
     return len;
 }
-//Answer:O(n^3)
+//Answer:O(n^2)
 
 //TODO:
 //Question 4: 
