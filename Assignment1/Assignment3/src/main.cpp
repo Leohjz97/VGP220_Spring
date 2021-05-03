@@ -1,6 +1,9 @@
 #include <iostream>
 #include "Inventory.h"
 
+//Grade: 100/100
+//Comments: Very nice coding. Well commented and organized. Keep up the good work!
+
 int main(int argc, char* argv[])
 {
 	Item hps{ "Healing Potion", 12, ItemType::Potion };
