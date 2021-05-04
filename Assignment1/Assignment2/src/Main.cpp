@@ -4,6 +4,8 @@
 //ID: 2042895
 //try to do Q6
 
+//Grade: 100/100 + 5 bonus!
+
 //TODO:  
 //Question 1:
 //How much time does the following method take? Use the big-O notation in terms
