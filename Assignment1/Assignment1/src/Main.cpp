@@ -49,17 +49,17 @@ int RecursiveMultiplication(int a, int b)
 	//without using the operator *
 	//You can use addition(+), subtraction(-) and bitShifting(<< or >>), but you
 	//should minimize the number of those operations.
-	if (a < b)
-	{
-		return RecursiveMultiplication(b, a);
-	}
-	else if (b != 0)
-	{
-		return (a + RecursiveMultiplication(a, b - 1));
-	}
-	else
+	if (b == 0) 
 	{
 		return 0;
+	}
+	if (b > 0) 
+	{
+		return a + RecursiveMultiplication(a, b - 1);
+	}
+	if (b < 0) 
+	{
+		return -RecursiveMultiplication(a, -b);
 	}
 
 	return 0;
