@@ -52,7 +52,7 @@ public:
 			}
 			else
 			{
-				while (i != output)
+				while (a != output)
 				{
 					a++;
 				}
