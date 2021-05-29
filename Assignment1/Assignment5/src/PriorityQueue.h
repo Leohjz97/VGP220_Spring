@@ -23,9 +23,6 @@ public:
 		//Look to do this, look at the member variables that you have.
 		//You can default initiliaze your capacity with 10 elements.
 		mDataArray = new Data[mCapacity];
-
-		mEmptyValue.priority = emptyValue.priority;
-		mEmptyValue.data = emptyValue.data;
 	}
 
 	~PriorityQueue()
