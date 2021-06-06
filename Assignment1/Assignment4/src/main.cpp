@@ -1,7 +1,7 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "Queue.h"
-
+//Grade: 100/100
 
 //TESTS
 int main(int argc, char* argv[])

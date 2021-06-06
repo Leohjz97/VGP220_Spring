@@ -2,6 +2,8 @@
 #include <string>
 #include <list>
 
+//Grade: 95/100
+
 //Solve collision with chaining
 //This Dictionary does not allows similar keys.
 
@@ -103,6 +105,8 @@ public:
 		return hash % 5; 
 	}
 
+	//ERROR -5. Since in your data allocation you are setting all the elements as nullptr, when you insert, you cannot just access the data 
+	//and change it's values. You will have to allocate memory for a Data<T>.
 	void Insert(const std::string& key, T value)
 	{
 		//Task 4: This is the hardest method to be implemented. You will need to hash 2 times.
